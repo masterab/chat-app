@@ -6,6 +6,8 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 // db connection
+mongoose.set('strictQuery', true);
+
 mongoose.connect('mongodb://0.0.0.0:27017/group-chat', {
   useNewUrlParser: true,
   useUnifiedTopology: true
